@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>BiblioAutor</title>
+
+    <!-- Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script>
+
+</head>
+<!--img class="materialboxed" data-caption="park" width="250" src="img/1.png"-->
+
+<body class="#263238 blue-grey darken-2">
+
+    <div class="container section">
+        <div class="row">
+            <div class="col s12">
+                <div class="slider">
+                    <ul class="slides">
+                        <li>
+                            <img src="img/1.png"> <!-- random image -->
+                            <div class="caption center-align">
+                                <h3 style="color:rgb(17, 12, 12)">BiblioAutor</h3>
+                                <h5 style="color:rgb(36, 35, 35)">Tu fuente de conocimientos.</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/2.png"> <!-- random image -->
+                            <div class="caption right-align">
+                                <h3 style="color:rgb(17, 12, 12)">BiblioAutor</h3>
+                                <h5 style="color:rgb(17, 12, 12)">Encuentra tus autores favoritos</h5>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/3.png"> <!-- random image -->
+                            <div class="caption left-align">
+                                <h3 style="color:rgb(17, 12, 12)">BiblioAutor</h3>
+                                <h5 style="color:rgb(17, 12, 12)">Sugiere nuevos autores</h5>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container #e0e0e0 grey lighten-2">
+        <h1>Agregar autor</h1>
+        <i class="material-icons">account_circle</i>
+        <input type="text" id="nombre" placeholder="nombre" class="form-control my-3">
+        <input type="text" id="apellido" placeholder="apellido" class="form-control my-3">
+        <input type="text" id="fecha" placeholder="fecha" class="form-control my-3">
+        <button class="btn btn-info" id="boton" onclick="guardar()">Guardar</button>
+
+        <table class="table my-3">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                    <th scope="col">Born</th>
+                    <th scope="col">Eliminar</th>
+                    <th scope="col">Editar</th>
+                </tr>
+            </thead>
+            <tbody id="tabla">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.slider');
+            var instances = M.Slider.init(elems,{
+                height:150
+            });
+        });
+    </script>
+</body>
+
+</html>
